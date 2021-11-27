@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataModel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New healthy habit this month" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgo-cx-1uB">
+                                <rect key="frame" x="20" y="84" width="374" height="141"/>
+                                <color key="backgroundColor" red="0.36868411381854727" green="0.00033646567801204341" blue="1" alpha="0.10893360668460265" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="22"/>
+                                <color key="textColor" red="0.27849416999999999" green="0.1962352839" blue="0.35484885240000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wao-bg-wYi">
+                                <rect key="frame" x="20" y="275.5" width="374" height="550.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9X1-wy-duA" customClass="TableViewCell" customModule="CoreDataModel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9X1-wy-duA" id="vT5-Hv-ugd">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-iL-pSv">
+                                <rect key="frame" x="20" y="199" width="103" height="31.5"/>
+                                <color key="backgroundColor" red="0.71501369200043374" green="0.63478230217333065" blue="0.99216955900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.97239691969999997" green="0.97629784500000005" blue="0.99216955900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Add +">
+                                    <fontDescription key="titleFontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addingHabit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7t-yV-pYQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BsP-iL-pSv" firstAttribute="baseline" secondItem="Qgo-cx-1uB" secondAttribute="baseline" id="49x-UM-kUM"/>
+                            <constraint firstItem="wao-bg-wYi" firstAttribute="top" secondItem="BsP-iL-pSv" secondAttribute="bottom" constant="45" id="DKC-U9-VBQ"/>
+                            <constraint firstItem="Qgo-cx-1uB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H3J-z5-xkZ"/>
+                            <constraint firstItem="wao-bg-wYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UVb-Ut-dcI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qgo-cx-1uB" secondAttribute="trailing" constant="20" id="ZgB-fj-njg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wao-bg-wYi" secondAttribute="trailing" constant="20" id="be7-9S-rrs"/>
+                            <constraint firstItem="Qgo-cx-1uB" firstAttribute="leading" secondItem="BsP-iL-pSv" secondAttribute="trailing" constant="-103" id="efi-yM-Fxw"/>
+                            <constraint firstItem="Qgo-cx-1uB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.157366" id="hgs-Bd-yzd"/>
+                            <constraint firstItem="BsP-iL-pSv" firstAttribute="leading" secondItem="Qgo-cx-1uB" secondAttribute="leading" id="kyb-vb-ob0"/>
+                            <constraint firstItem="Qgo-cx-1uB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="vuN-02-gur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wao-bg-wYi" secondAttribute="bottom" constant="36" id="xuk-oo-3J1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="habitbutton" destination="BsP-iL-pSv" id="Rkk-yS-zuA"/>
+                        <outlet property="habitlebel" destination="Qgo-cx-1uB" id="L63-K2-0Ea"/>
+                        <outlet property="tableView" destination="wao-bg-wYi" id="Dxa-g0-nul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="72.991071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
