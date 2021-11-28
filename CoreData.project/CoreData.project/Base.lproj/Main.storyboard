@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sqD-Yd-hn3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="M0l-tu-VM0">
+            <objects>
+                <viewController id="sqD-Yd-hn3" customClass="ViewController" customModule="CoreData_project_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rl-fR-PCT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5V-NI-gA3">
+                                <rect key="frame" x="0.0" y="89" width="414" height="70"/>
+                                <color key="backgroundColor" red="0.50660008599999995" green="0.44602896339999998" blue="0.54188368060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="ubl-jG-tSr"/>
+                                    <constraint firstAttribute="height" constant="70" id="zAD-ej-bDo"/>
+                                </constraints>
+                                <string key="text">my daily achievements
+</string>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Add Achievements" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHb-9J-n8f">
+                                <rect key="frame" x="20" y="209" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7fy-lN-km5"/>
+                                    <constraint firstAttribute="width" constant="290" id="cbn-Xf-VaX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiZ-VV-Unf">
+                                <rect key="frame" x="329" y="209" width="57" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8zJ-Ey-RjG"/>
+                                    <constraint firstAttribute="width" constant="57" id="NF0-1j-VIN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ADD">
+                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="15"/>
+                                    <color key="baseBackgroundColor" red="0.50660008599999995" green="0.44602896339999998" blue="0.54188368060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="add:" destination="sqD-Yd-hn3" eventType="touchUpInside" id="UGM-0C-JzM"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RvV-zh-nE9">
+                                <rect key="frame" x="0.0" y="299" width="414" height="597"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ach" rowHeight="85" id="CUb-a4-frB">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CUb-a4-frB" id="Nlu-Z5-93C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.79966991539999999" green="0.80191896780000005" blue="0.89897017050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gij-4j-IwK"/>
+                        <color key="backgroundColor" red="0.79966991539999999" green="0.80191896780000005" blue="0.89897017050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="P5V-NI-gA3" firstAttribute="leading" secondItem="Gij-4j-IwK" secondAttribute="leading" id="3Gz-Bc-hN3"/>
+                            <constraint firstItem="HHb-9J-n8f" firstAttribute="top" secondItem="P5V-NI-gA3" secondAttribute="bottom" constant="50" id="4Sa-sM-hRc"/>
+                            <constraint firstItem="EiZ-VV-Unf" firstAttribute="leading" secondItem="HHb-9J-n8f" secondAttribute="trailing" constant="19" id="FGU-zz-rOe"/>
+                            <constraint firstItem="RvV-zh-nE9" firstAttribute="trailing" secondItem="Gij-4j-IwK" secondAttribute="trailing" id="KzA-Fy-sQG"/>
+                            <constraint firstItem="EiZ-VV-Unf" firstAttribute="top" secondItem="P5V-NI-gA3" secondAttribute="bottom" constant="50" id="NJQ-ra-5Wc"/>
+                            <constraint firstAttribute="bottom" secondItem="RvV-zh-nE9" secondAttribute="bottom" id="Pxx-Wh-wUc"/>
+                            <constraint firstItem="RvV-zh-nE9" firstAttribute="top" secondItem="HHb-9J-n8f" secondAttribute="bottom" constant="56" id="STN-dW-Rm5"/>
+                            <constraint firstItem="RvV-zh-nE9" firstAttribute="leading" secondItem="Gij-4j-IwK" secondAttribute="leading" id="cSU-dX-vEG"/>
+                            <constraint firstItem="P5V-NI-gA3" firstAttribute="trailing" secondItem="Gij-4j-IwK" secondAttribute="trailing" id="fTv-Vz-B8K"/>
+                            <constraint firstItem="HHb-9J-n8f" firstAttribute="leading" secondItem="Gij-4j-IwK" secondAttribute="leading" constant="20" id="nHW-Hf-XAx"/>
+                            <constraint firstItem="P5V-NI-gA3" firstAttribute="top" secondItem="Gij-4j-IwK" secondAttribute="top" constant="45" id="yYM-xE-e4R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myAchievements" destination="RvV-zh-nE9" id="VRp-if-RjF"/>
+                        <outlet property="titleField" destination="HHb-9J-n8f" id="4P4-Hh-qDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4D-D4-ejV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
