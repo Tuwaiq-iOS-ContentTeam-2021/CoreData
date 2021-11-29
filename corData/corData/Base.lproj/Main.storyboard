@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="corData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-Nq-f94">
+                                <rect key="frame" x="92" y="172" width="213" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="c2Z-yr-VBM"/>
+                                    <constraint firstAttribute="height" constant="31" id="efX-Rb-f5X"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="AddProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxm-Be-QTq"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Gqi-b1-FPc">
+                                <rect key="frame" x="0.0" y="103" width="414" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="ApJ-RJ-gAE"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cO4-qN-OR9">
+                                <rect key="frame" x="0.0" y="302" width="414" height="594"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="594" id="SSu-dx-Ley"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eId-Tl-S2c">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eId-Tl-S2c" id="FXc-tm-fkM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="productsApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oil-Av-aai">
+                                <rect key="frame" x="55" y="52" width="304" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="j5l-gr-RWb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cO4-qN-OR9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0LX-g8-ys5"/>
+                            <constraint firstItem="oil-Av-aai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="5H4-bA-e1i"/>
+                            <constraint firstItem="FZ1-Nq-f94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="Fik-NA-4LR"/>
+                            <constraint firstItem="Gqi-b1-FPc" firstAttribute="top" secondItem="oil-Av-aai" secondAttribute="bottom" constant="15" id="Grp-V9-ynG"/>
+                            <constraint firstItem="Gqi-b1-FPc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pa5-p8-z74"/>
+                            <constraint firstItem="FZ1-Nq-f94" firstAttribute="top" secondItem="Gqi-b1-FPc" secondAttribute="bottom" constant="18" id="QBM-eF-GU3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FZ1-Nq-f94" secondAttribute="trailing" constant="109" id="cOp-HD-x4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oil-Av-aai" secondAttribute="trailing" constant="55" id="g24-hx-nIZ"/>
+                            <constraint firstAttribute="bottom" secondItem="cO4-qN-OR9" secondAttribute="bottom" id="hJt-rD-KzG"/>
+                            <constraint firstItem="Gqi-b1-FPc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mbe-39-N6b"/>
+                            <constraint firstItem="oil-Av-aai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="meh-Vg-eg2"/>
+                            <constraint firstItem="cO4-qN-OR9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="uJy-Hj-UgY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTableViwe" destination="cO4-qN-OR9" id="38H-3o-zYb"/>
+                        <outlet property="searchBar" destination="Gqi-b1-FPc" id="OWV-V7-UBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
