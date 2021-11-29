@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coreDataPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-G2-OPb">
+                                <rect key="frame" x="0.0" y="306" width="414" height="590"/>
+                                <color key="backgroundColor" name="myMood"/>
+                                <color key="sectionIndexBackgroundColor" name="myMood"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="VJc-FN-4gd">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJc-FN-4gd" id="RTB-kG-7WJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="myMood"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="juc-c5-dzc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qhy-rT-dpF"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sra-eF-MWJ">
+                                <rect key="frame" x="20" y="44" width="374" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9Ld-IF-kJL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PED-ci-IVS">
+                                <rect key="frame" x="128" y="183" width="158" height="40"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.86274509799999999" blue="0.75294117650000003" alpha="0.45943653340000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VjK-YC-DbX"/>
+                                    <constraint firstAttribute="width" constant="158" id="apu-JN-GMK"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change theme"/>
+                                <connections>
+                                    <action selector="themeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOe-QC-fsA"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-X8-hn1">
+                                <rect key="frame" x="0.0" y="255" width="414" height="51"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.86274509799999999" blue="0.75294117650000003" alpha="0.45943653340000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="NWV-YS-wdv"/>
+                                    <constraint firstAttribute="width" constant="414" id="fmA-oL-kZC"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Zpi-77-eHb"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDW-qm-Xpu">
+                                <rect key="frame" x="109" y="115" width="196" height="40"/>
+                                <color key="backgroundColor" red="0.68235294117647061" green="0.86274509803921573" blue="0.75294117647058822" alpha="0.45943653340242346" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fue-CQ-yGF"/>
+                                    <constraint firstAttribute="width" constant="196" id="phU-OD-T6w"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="w8j-Ba-xN9"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add new product"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Y8-jl-3la"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="myMood"/>
+                        <constraints>
+                            <constraint firstItem="PED-ci-IVS" firstAttribute="top" secondItem="uDW-qm-Xpu" secondAttribute="bottom" constant="28" id="Jfr-ta-EZd"/>
+                            <constraint firstItem="GqE-G2-OPb" firstAttribute="top" secondItem="pL0-X8-hn1" secondAttribute="bottom" id="Jm9-qN-lLD"/>
+                            <constraint firstItem="sra-eF-MWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M6p-6x-x3c"/>
+                            <constraint firstItem="pL0-X8-hn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OOM-Z1-Ltu"/>
+                            <constraint firstItem="sra-eF-MWJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SAd-ce-XVy"/>
+                            <constraint firstItem="PED-ci-IVS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TFd-QY-BKX"/>
+                            <constraint firstItem="GqE-G2-OPb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="UAO-oa-Ddl"/>
+                            <constraint firstAttribute="bottom" secondItem="GqE-G2-OPb" secondAttribute="bottom" id="YS7-nm-ooQ"/>
+                            <constraint firstItem="pL0-X8-hn1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zea-eR-An5"/>
+                            <constraint firstItem="uDW-qm-Xpu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="cfH-C8-XGv"/>
+                            <constraint firstItem="pL0-X8-hn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eQ6-Zq-3UW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sra-eF-MWJ" secondAttribute="trailing" constant="20" id="grb-5l-F5i"/>
+                            <constraint firstItem="GqE-G2-OPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hMw-vW-9lB"/>
+                            <constraint firstItem="pL0-X8-hn1" firstAttribute="top" secondItem="PED-ci-IVS" secondAttribute="bottom" constant="32" id="hfq-Sh-Kc5"/>
+                            <constraint firstItem="pL0-X8-hn1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="naN-BV-6ra"/>
+                            <constraint firstItem="uDW-qm-Xpu" firstAttribute="centerX" secondItem="sra-eF-MWJ" secondAttribute="centerX" id="rwI-4A-yqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="uDW-qm-Xpu" id="ISb-L8-pr8"/>
+                        <outlet property="searchOutlet" destination="pL0-X8-hn1" id="tkt-51-OUG"/>
+                        <outlet property="tableView01" destination="GqE-G2-OPb" id="3KO-uI-rlu"/>
+                        <outlet property="themeBtnOutlet" destination="PED-ci-IVS" id="8AZ-qI-PXS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="myMood">
+            <color red="0.57599997520446777" green="0.63499999046325684" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
